@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Monster List: MINI & MVP</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 20px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #444;
+    }
+
+    input[type="text"] {
+      display: block;
+      margin: 0 auto 30px auto;
+      padding: 10px;
+      width: 80%;
+      max-width: 400px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .monster-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .monster-table th, .monster-table td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .monster-table th {
+      background-color: #222;
+      color: white;
+    }
+
+    .mini th {
+      background-color: #48c9b0;
+    }
+
+    .mvp th {
+      background-color: #f39c12;
+    }
+
+    .mini td {
+      background-color: #e8f8f5;
+    }
+
+    .mvp td {
+      background-color: #fef5e7;
+    }
+
+    .not-found {
+      text-align: center;
+      color: red;
+      margin-top: 10px;
+      font-weight: bold;
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .monster-table th, .monster-table td {
+        font-size: 12px;
+        padding: 6px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🧙‍♂️ รายชื่อ MINI & MVP Monsters</h1>
+  <input type="text" id="searchInput" placeholder="🔍 ค้นหาเฉพาะชื่อมอนสเตอร์ เช่น 'ghost', 'dragon'">
+
+  <h2>🐲 MINI Monsters</h2>
+  <table class="monster-table mini" id="miniTable">
+    <thead>
+      <tr>
+        <th>ประเภท</th><th>ขนาด</th><th>เผ่า</th><th>ธาตุ</th><th>ชื่อมอนสเตอร์</th>
+      </tr>
+    </thead>
+  <tbody>
+      <tr><td>MINI</td><td>เล็ก</td><td>insect</td><td>Wind</td><td>Dragonfly</td></tr>
+      <tr><td>MINI</td><td>เล็ก</td><td>Brute</td><td>Nutral</td><td>Eclipse</td></tr>
+      <tr><td>MINI</td><td>กลาง</td><td>Demon</td><td>Ghost</td><td>Ghostring</td></tr>
+      <tr><td>MINI</td><td>กลาง</td><td>Plants</td><td>Water</td><td>Mastering</td></tr>
+      <tr><td>MINI</td><td>เล็ก</td><td>Fish</td><td>Water</td><td>Toad</td></tr>
+      <tr><td>MINI</td><td>ใหญ่</td><td>Fish</td><td>Water</td><td>KingDramoh</td></tr>
+      <tr><td>MINI</td><td>กลาง</td><td>Demon</td><td>Shadow</td><td>Deviling</td></tr>
+      <tr><td>MINI</td><td>กลาง</td><td>Angel</td><td>Holy</td><td>Angeling</td></tr>
+      <tr><td>MINI</td><td>กลาง</td><td>Brute</td><td>Earth</td><td>VagabondWolf</td></tr>
+      <tr><td>MINI</td><td>กลาง</td><td>Demon</td><td>Undead</td><td>DarkPriest</td></tr>
+      <tr><td>MINI</td><td>ใหญ่</td><td>Brute</td><td>Fire</td><td>Chimera</td></tr>
+      <tr><td>MINI</td><td>ใหญ่</td><td>Formless</td><td>Shadow</td><td>Mysteltain</td></tr>
+      <tr><td>MINI</td><td>กลาง</td><td>Undead</td><td>Undead</td><td>Necromancer</td></tr>
+      <tr><td>MINI</td><td>กลาง</td><td>Formless</td><td>Shadow</td><td>Ogretooth</td></tr>
+      <tr><td>MINI</td><td>ใหญ่</td><td>Demon</td><td>Ghost</td><td>NaghtSieger</td></tr>
+      <tr><td>MINI</td><td>ใหญ่</td><td>Fish</td><td>Water</td><td>Coelacanth</td></tr>
+      <tr><td>MINI</td><td>เล็ก</td><td>Angel</td><td>Holy</td><td>Skeggiold</td></tr>
+      <tr><td>MINI</td><td>กลาง</td><td>Angel</td><td>Holy</td><td>Observation</td></tr>
+      <tr><td>MINI</td><td>เล็ก</td><td>insect</td><td>Nutral</td><td>Gold Queen Scaraba</td></tr>
+      <tr><td>MINI</td><td>เล็ก</td><td>insect</td><td>Poison</td><td>Faceworm Queen</td></tr>
+      <tr><td>MINI</td><td>กลาง</td><td>Angel</td><td>Holy</td><td>Shelter</td></tr>
+      <tr><td>MINI</td><td>ใหญ่</td><td>Dragon</td><td>Water</td><td>Ktullanux</td></tr>
+    </tbody>
+  </table>
+  <div id="miniNotFound" class="not-found">❌ ไม่พบข้อมูลใน MINI Monsters</div>
+
+  <h2>💀 MVP Monsters</h2>
+  <table class="monster-table mvp" id="mvpTable">
+    <thead>
+      <tr>
+        <th>ประเภท</th><th>ขนาด</th><th>เผ่า</th><th>ธาตุ</th><th>ชื่อมอนสเตอร์</th>
+      </tr>
+    </thead>
+ <tbody>
+      <tr><td>MVP</td><td>ใหญ่</td><td>Brute</td><td>Nutral</td><td>Phreeoni</td></tr>
+      <tr><td>MVP</td><td>ใหญ่</td><td>insect</td><td>Wind</td><td>Mistress</td></tr>
+      <tr><td>MVP</td><td>ใหญ่</td><td>Brute</td><td>Fire</td><td>Eddga</td></tr>
+      <tr><td>MVP</td><td>ใหญ่</td><td>Fish</td><td>Water</td><td>Kraken</td></tr>
+      <tr><td>MVP</td><td>ใหญ่</td><td>Demi Human</td><td>Earth</td><td>OrcHero</td></tr>
+      <tr><td>MVP</td><td>ใหญ่</td><td>insect</td><td>Earth</td><td>Maya</td></tr>
+      <tr><td>MVP</td><td>ใหญ่</td><td>Demi Human</td><td>Shadow</td><td>Pharaoh</td></tr>
+      <tr><td>MVP</td><td>ใหญ่</td><td>Demi Human</td><td>Earth</td><td>OrcLord</td></tr>
+      <tr><td>MVP</td><td>ใหญ่</td><td>Demi Human</td><td>Earth</td><td>AmonRa</td></tr>
+      <tr><td>MVP</td><td>กลาง</td><td>Demon</td><td>Shadow</td><td>Doppelganger</td></tr>
+      <tr><td>MVP</td><td>กลาง</td><td>Demon</td><td>Shadow</td><td>Morroc</td></tr>
+      <tr><td>MVP</td><td>ใหญ่</td><td>Demon</td><td>Nutral</td><td>TimeHolder</td></tr>
+      <tr><td>MVP</td><td>ใหญ่</td><td>Demon</td><td>Nutral</td><td>TaoGunka</td></tr>
+      <tr><td>MVP</td><td>ใหญ่</td><td>Dragon</td><td>Nutral</td><td>LostDragon</td></tr>
+      <tr><td>MVP</td><td>ใหญ่</td><td>Demon</td><td>Shadow</td><td>Lord of the dead</td></tr>
+      <tr><td>MVP</td><td>กลาง</td><td>Demon</td><td>Shadow</td><td>FallenBishop</td></tr>
+      <tr><td>MVP</td><td>กลาง</td><td>Angel</td><td>Holy</td><td>ArcAngeling</td></tr>
+      <tr><td>MVP</td><td>ใหญ่</td><td>Formless</td><td>Wind</td><td>Gioia</td></tr>
+      <tr><td>MVP</td><td>กลาง</td><td>Formless</td><td>Nutral</td><td>RSX-0806</td></tr>
+      <tr><td>MVP</td><td>ใหญ่</td><td>Dragon</td><td>Shadow</td><td>Nidhoggr'sShadow</td></tr>
+      <tr><td>MVP</td><td>ใหญ่</td><td>Formless</td><td>Ghost</td><td>Gloom Under Night</td></tr>
+      <tr><td>MVP</td><td>กลาง</td><td>Angel</td><td>Shadow</td><td>Retribution</td></tr>
+    </tbody>
+  </table>
+  <div id="mvpNotFound" class="not-found">❌ ไม่พบข้อมูลใน MVP Monsters</div>
+
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const miniTable = document.getElementById('miniTable');
+    const mvpTable = document.getElementById('mvpTable');
+    const miniNotFound = document.getElementById('miniNotFound');
+    const mvpNotFound = document.getElementById('mvpNotFound');
+
+    searchInput.addEventListener('input', function () {
+      const filter = this.value.toLowerCase();
+
+      function filterTable(table, notFoundDiv) {
+        const rows = table.querySelectorAll('tbody tr');
+        let visibleCount = 0;
+
+        rows.forEach(row => {
+          const nameCell = row.cells[4];
+          if (nameCell) {
+            const nameText = nameCell.textContent.toLowerCase();
+            const isMatch = nameText.includes(filter);
+            row.style.display = isMatch ? '' : 'none';
+            if (isMatch) visibleCount++;
+          }
+        });
+
+        notFoundDiv.style.display = visibleCount === 0 ? 'block' : 'none';
+      }
+
+      filterTable(miniTable, miniNotFound);
+      filterTable(mvpTable, mvpNotFound);
+    });
+  </script>
+
+</body>
+</html>
